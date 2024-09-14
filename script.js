@@ -53,7 +53,7 @@ function drawWheel() {
     ctx.rotate(startAngle + anglePerSector / 2);
     ctx.textAlign = "right";
     ctx.fillStyle = "#000";
-    ctx.font = "28px Arial";
+    ctx.font = "50px Arial";
     ctx.fillText(`${elements[i]}`, radius - 50, 10);
     ctx.restore();
     }
@@ -101,7 +101,7 @@ var elements = [];
 function newElement() {
   var inputValue = document.getElementById("my-input").value;
   if (inputValue !== "") {
-    if (inputValue.length < 15) {
+    if (inputValue.length < 25) {
       if (NumOfEvents < 12) {
         NumOfEvents = NumOfEvents + 1;
         var li = document.createElement("li");
@@ -137,7 +137,7 @@ function newElement() {
         }
       }
     } else {
-      alert("Максимална довжина - 15 символів");
+      alert("Максимална довжина - 25 символів");
     }
   } else {
     alert("Щось потрібно написати!");
